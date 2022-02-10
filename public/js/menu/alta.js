@@ -127,8 +127,8 @@ function uploadFile(file){
     })
     xhr.addEventListener('load', () => {
         if(xhr.status == 200){
-            let uploadedImageName = JSON.parse(xhr.response).nombre
-            uploadedImageURL = uploadedImageName? ('/uploads' + uploadedImageName)  : ''
+            let uploadedImageName = JSON.parse(xhr.response).name
+            uploadedImageURL = uploadedImageName? ('/uploads/' + uploadedImageName)  : ''
         }
     })
     var formData = new FormData()
