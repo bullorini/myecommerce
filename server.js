@@ -27,6 +27,7 @@ app.use('/upload', routerUpload)
 console.log('process.env.PORT:', process.env.PORT)
 console.log('process.env.TIPO_P:', process.env.TIPO_P)
 console.log('process.env.CNX:', process.env.CNX)
+console.log('Server run on: http://localhost:' + 8080)
 
 /* ------------ LISTEN DEL SERVIDOR --------------- */
 const PORT = config.PORT

@@ -1,5 +1,5 @@
 import config from '../config.js'
-
+import ProductoValidator from './validaciones/productos.js'
 //import ProductosModelMem from "../model/productos-mem.js"
 //import ProductosModelFile from "../model/productos-file.js"
 //import ProductosModelMongoDB from '../model/productos-mongodb.js'
@@ -23,13 +23,27 @@ const obtenerProducto = async id => {
 }
 
 const guardarProducto = async producto => {
-    let productoGuardado = await model.createProducto(producto)
-    return productoGuardado
+    const errorvalidation = ProductoValidator.validar(producto)
+    if (!errorvalidation){
+        let productoGuardado = await model.createProducto(producto)
+        return productoGuardado
+    }
+    else {
+        console.log('error en guardarproducto',errorvalidation.details[0].message)
+        return {}
+    }
 }
 
 const actualizarProducto = async (id,producto) => {
-    let productoActualizado = await model.updateProducto(id,producto)
-    return productoActualizado
+    const errorvalidation = ProductoValidator.validar(producto)
+    if (!errorvalidation){
+        let productoActualizado = await model.updateProducto(id,producto)
+        return productoActualizado
+    }
+    else {
+        console.log('error en guardarproducto',errorvalidation.details[0].message)
+        return {}
+    }
 }
 
 const borrarProducto = async id => {

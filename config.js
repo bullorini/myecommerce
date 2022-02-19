@@ -8,6 +8,6 @@ dotenv.config({
 
 export default {
     PORT: process.env.PORT || 8080,
-    TIPO_DE_PERSISTENCIA: process.env.TIPO_P || 'MEM', // 'MEM', 'FILE', 'MONGODB'
-    STR_CNX: process.env.CNX || ''
+    TIPO_DE_PERSISTENCIA: process.env.TIPO_P || 'MONGODB', // 'MEM', 'FILE', 'MONGODB'
+    STR_CNX: process.env.CNX || 'mongodb+srv://cbullorini:40u8rAIQSWXftRhk@clustertest.fjnfv.mongodb.net/myecommerce?retryWrites=true&w=majority'
 }
