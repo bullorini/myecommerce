@@ -1,8 +1,6 @@
 import config from '../config.js'
-import ProductoValidator from './validaciones/productos.js'
-//import ProductosModelMem from "../model/productos-mem.js"
-//import ProductosModelFile from "../model/productos-file.js"
-//import ProductosModelMongoDB from '../model/productos-mongodb.js'
+
+
 import ProductosModel from '../model/productos.js'
 
 //const model = new ProductosModelMem()

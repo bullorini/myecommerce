@@ -42,5 +42,5 @@ const postCarrito = async (req, res) => {
 };
 
 export default {
-  postCarrito,
-};
+    postCarrito
+}
