@@ -13,6 +13,13 @@
         <input type="checkbox" id="menu">
 
         <nav class="nav-bar">
+            <div class="nav-bar__nav-logo main-logo">
+                <a class="nav-bar__nav-link" href="/#inicio" id="inicio">
+                    <div class="logo-container">
+                        <img src="img/logos/main-logo.png" alt="">
+                    </div>
+                </a>
+            </div>
             <ul class="nav-bar__nav-list">
                 <li class="nav-bar__nav-item">
                     <a class="nav-bar__nav-link" href="" id="inicio">Inicio</a>
@@ -24,21 +31,24 @@
                     <a class="nav-bar__nav-link" href="" id="contacto">Contacto</a>
                 </li>
                 <li class="nav-bar__nav-item">
-                    <a class="nav-bar__nav-link" href="" id="nosotros">Nosotros</a>
+                    <a class="nav-bar__nav-link" href="" id="nosotros">Misión</a>
                 </li>
             </ul>
         </nav>
         <div class="search-bar">
-            <div class="search-bar__logo-container">
-                Logo
-            </div>
             <form class="search-bar__form-container">
-                <label class="search-bar__form-label" for="busqueda">Buscar</label>
+                <div class="nav-bar__nav-logo main-logo">
+                    <a class="nav-bar__nav-link" href="/#inicio" id="inicio">
+                        <div class="logo-container">
+                            <img src="img/logos/main-logo.png" alt="">
+                        </div>
+                    </a>
+                </div>
                 <input class="search-bar__form-search" id="busqueda" type="search">
-                <input class="search-bar__form-submit" type="submit" value="Buscar">
+                <input class="search-bar__form-submit" type="submit" value="🔍">
             </form>
             <div class="search-bar__carrito-container">
-                C
+                🛒
             </div>
             <div class="menu-toggle">
                 <label class="menu-toggle__label" for="menu">
@@ -60,7 +70,16 @@
     <!-- Zona de inyección de plantillas SPA -->
     <main></main>
     
-    <footer></footer>
+    <footer>
+        <div class="footer__container">
+            <ul class="footer__list">
+                <li class="footer__list-item">Inicio</li>
+                <li class="footer__list-item">Alta</li>
+                <li class="footer__list-item">Contacto</li>
+                <li class="footer__list-item">Nosotros</li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- ----------------------------------------------------------------- -->    
     <!--                        ZONA DE SCRIPTS                            -->

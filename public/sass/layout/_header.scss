@@ -30,13 +30,33 @@
             NAV BAR
 ***********************************/
 .nav-bar {
-    background-color: mediumturquoise;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Lobster";
+    &__nav-logo{
 
+    }
+    &__nav-logo.main-logo{
+        & > a{
+            height: 95px;
+            padding: 0px;
+        }
+        & > a > .logo-container{
+            height: 100%;
+        }
+        & > a > .logo-container > img{
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            width: 150px;
+        }
+    }
     &__nav-list {
         display: flex;
         list-style-type: none;
         justify-content: center;
-
+        font-size: 1.4rem;
 
         @media (max-width: 768px) {
             & {
@@ -48,13 +68,12 @@
 
     &__nav-item {
         text-align: center;
-        background-color: pink;
+        align-self: center;
     }
 
     &__nav-link {
         display: block;
-        background-color: purple;
-        color: #fff;
+        color: #07736a;
         padding: 1em 2em;
         text-decoration: none;
     }
@@ -72,45 +91,49 @@
             SEARCH BAR
 ***********************************/
 .search-bar {
-    background-color: olivedrab;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
-
-    &__logo-container,
+    padding: 1rem 2rem;
     &__form-container {
-        padding: 1em;
-    }
-    
-    &__logo-container {
-        background-color: yellow;
+        padding: 0;
+        align-items: center;
     }
     
     &__form-container {
-        background-color: gold;
+        background-color: transparent;
         flex-basis: 100%;
         display: flex;
         justify-content: center;
     }
     
-    &__form-label {
-        background-color: greenyellow;
-    }
-    
     &__form-search {
-        background-color: deeppink;
-        width: 70%;
+        width: 40%;
+        height: 36px;
+        @media (max-width: 768px) {
+            width: 72%;
+            height: 30%;
+            align-self: center;
+        }
     }
     
     &__form-submit {
-        background-color: darkslategray;
+        background-color: transparent;
+        border: unset;
     }
     
     &__carrito-container {
-        flex: 0 0 3em;
-        background-color: goldenrod;
+        font-size: 2rem;
+        filter: invert(1);
+        background-color: transparent;
         cursor: pointer;
+    } 
+    & .nav-bar__nav-logo.main-logo{
+        display:none;
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
-
 }
 
 
@@ -119,17 +142,14 @@
 ***********************************/
 .menu-toggle {
     display: none;
-    background-color: red;
     flex: 0 0 3em;
     position: relative;
     cursor: pointer;
-
-
+    box-shadow: 0px 1px 8px 0px #07736a63;
 
     &__label {
-        display: block;
-        background-color: black;
-        /* width: 100%; */
+        display: flex;
+        background-color: transparent;
         height: 100%;
     }
     
@@ -137,7 +157,7 @@
     &__meat,
     &__bottom-bread {
         display: block;
-        background-color: #333;
+        background-color: #07736a;
         height: .2em;
         position: absolute;
         left: .5em;
@@ -161,6 +181,7 @@
     @media (max-width: 768px) {
         & {
             display: block;
+            height: 4rem;
         }    
     }
 

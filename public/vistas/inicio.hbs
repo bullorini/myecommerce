@@ -2,11 +2,15 @@
     {{#each productos}}
     <div class="card" onclick="agregarAlCarrito('{{id}}')">
         <article class="card__article">
+            <h3 class="card__article-header">
+                {{categoria}}
+            </h3>
             <div class="card__image-container">
                 <img class="card__image" src="{{foto}}" alt="foto de {{nombre}}">
             </div>
             <div class="card__content">
                 <h2 class="card__heading">{{nombre}}</h2>
+                <p class="card__subheading">({{marca}})</p>
                 <div class="card__description">
                     <p>{{detalles}}</p>
                 </div>
